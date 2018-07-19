@@ -1,0 +1,79 @@
+/*
+* 公用样式
+* */
+
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    // -webkit-user-select: none;
+    // -moz-user-focus: none;
+    // -moz-user-select: none;
+    -webkit-appearance:none;
+    // outline: none;
+    // border: none;
+}
+
+.mobile{
+    display: none;
+}
+
+body,html{
+	color: @textMainColor;
+	font-size: @fontSize;
+	font-family: @typefaceCn;
+}
+#app{
+    position: relative;
+    width: 100%;
+    min-width: @pageWidth;
+	box-sizing: border-box;
+}
+
+.title{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    &.drak{
+        color: @textMainColor;
+    }
+}
+
+.box{
+    display: flex;
+    width: 100%;
+    min-width: @pageWidth;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+        max-width: 100%;
+    }
+    .img-full-bg{
+        position: relative;
+        left: 50%;
+        width: 1920px;
+        max-width: none;
+        height: 710px;
+        margin-left: -960px;
+    }
+}
+
+.container{
+    position: relative;
+    max-width: @pageWidth;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 720px) {
+    #app{
+		min-width: inherit;
+    }
+    .box{
+        min-width: inherit;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .mobile{
+		display: block;
+	}
+}

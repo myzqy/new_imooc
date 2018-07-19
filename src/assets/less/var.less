@@ -1,0 +1,61 @@
+/*
+* 整站变量
+* */
+
+/* 宽度 */
+@pageWidth: 1220px; /* 网站宽度 */
+
+/* color 颜色变量 */
+@mainColor: #fee65f; /* 公司主色 */
+@textActiveColor: #0f5e68; /* 选中颜色 */
+@textTitleColor: #0f5e68; /* 标题颜色 */
+@textMainColor: #333;
+@textSecondColor: #666;
+@textThirdColor: #999;
+
+/* 描边颜色 */
+@borderMainColor: #eee;
+
+/* 字体 */
+@typefaceEn: Arial, Helvetica, sans-serif;
+@typefaceCn: PingFangSC-Regular, PingFangSC, microsoft yahei;
+
+/* 字体大小 */
+@fontSize: 14px;
+@fontSizeTitle: 16px;
+@fontSizeIcon: 18px;
+
+/* 背景颜色 */
+@bgColor: #181818;
+@bgMainColor: #0f5e68;
+@transparencyBg: rgba(0, 0, 0, .5);
+
+/* 背景 */
+.bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: @transparencyBg;
+}
+
+/* 容器显示/隐藏 */
+.visibilityShow(@transition: opacity .3s, visibility .3s;) {
+	opacity: 1;
+	visibility: visible;
+	transition: @transition;
+}
+.visibilityHide(@transition: opacity .3s, visibility .3s;) {
+	opacity: 0;
+	visibility: hidden;
+	transition: @transition;
+}
+
+/*右方三角形*/
+.triangle-right(@size: 10px,@color: white) {
+	border-top: @size solid transparent;
+	border-right: 0;
+	border-bottom: @size solid transparent;
+	border-left:  @size solid @color;
+  }
